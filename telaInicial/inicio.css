@@ -1,0 +1,38 @@
+body{
+    background-color: #c7f9cc;
+    color: #22577a;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.titulo{
+    /* margin-left: 125px;
+    margin-right: 500px;  */
+    font-size: 150%;
+}
+#livros{
+    max-width: 450px;
+    /* margin-right: 80px; */
+}
+#estante{
+    max-width: 100%;
+    /* margin-right: 75px; */
+}
+.login{
+    text-align: right;
+    font-weight: bolder;
+    font-size: 25px; 
+    margin-right: 60px; 
+    margin-top: 20px;
+}
+
+#principal{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+#esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
