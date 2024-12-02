@@ -1,0 +1,84 @@
+body{
+    background-color: #c7f9cc;
+    color: #22577a;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    display: flex;
+    gap: 17px;
+    width: 100%;
+    font-weight: bolder;
+}
+
+#cantologo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #22577a;
+}
+
+#logo{
+    height: 50px;
+}
+
+section{
+    background-color: #57cc99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 57px 20px;
+    max-width: 75%;
+    margin-top: 5%;
+    border-radius: 8px;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+    border-radius: 22px;
+    height: 400px;
+    max-width: 350px;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.acessar{
+    color: #c7f9cc;
+    font-weight: bolder;
+    background-color:#22577a;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images{
+    background-color: #c7f9cc;
+    display: flex;
+    border-radius: 8px;
+    padding: 10px;
+    justify-content: center;
+}
+.image{
+    height: 100px;
+
+}

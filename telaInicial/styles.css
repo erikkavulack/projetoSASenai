@@ -1,0 +1,65 @@
+body{
+    background-color: #c7f9cc;
+    color: #22577a;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    gap: 5%;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    font-size: 42px;
+}
+
+#principal{
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+img{
+    height: 300px;
+    max-height: 300px;
+}
+
+#logo{
+    max-height: 240px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 16px; 
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 25px;
+    border: 4px solid #22577a;
+}
+
+.link-login{
+    background-color: #22577a;
+    color: #c7f9cc;
+}
+
+.link-criar-conta{
+    background-color: transparent;
+    color: #22577a;
+}
+
+.span-texto{
+    font-weight: 600;
+}
