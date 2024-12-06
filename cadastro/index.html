@@ -24,25 +24,24 @@
     <div class="container">
         <div class="formulario">
             <div id="coluna">
-                <label for="nome">NOME</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="campoNovoNome">NOME</label>
+                <input type="text" id="campoNovoNome" name="campoNovoNome" required>
                 
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" required>
+                <label for="campoNovoEmail">EMAIL</label>
+                <input type="email" id="campoNovoEmail" name="campoNovoEmail" required>
             </div>
     
-            <div id= coluna>
-                <label for="senha">SENHA</label>
-                <input type="password" id="senha" name="senha" required>
+            <div id= "coluna">
+                <label for="campoNovaSenha">SENHA</label>
+                <input type="password" id="campoNovaSenha" name="campoNovaSenha" required>
     
-                <label for="confsenha">CONFIRME SUA SENHA</label>
-                <input type="password" id="confsenha" name="confsenha" required>
+                <label for="campoRepSenha">CONFIRME SUA SENHA</label>
+                <input type="password" id="campoRepSenha" name="campoRepSenha" required>
             </div>
         </div>
 
-        <button type="submit" id="botao">Cadastre-se</button>
+        <button onclick="cadastra()">Cadastrar</button>
     </div>
-
 
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -51,6 +50,6 @@
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
