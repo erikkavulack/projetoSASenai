@@ -2,7 +2,6 @@ body{
     background-color: #c7f9cc;
     color: #22577a;
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +16,7 @@ header{
     gap: 17px;
     width: 100%;
     font-weight: bolder;
+    justify-content: space-between;
 }
 
 #cantologo{
@@ -24,6 +24,27 @@ header{
     display: flex;
     align-items: center;
     color: #22577a;
+}
+
+.sair{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #38a3a5;
+    color: #c7f9cc;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+.sair>img{
+    height: 24px;
+}
+
+button{
+    cursor: pointer;
 }
 
 #logo{
@@ -43,22 +64,49 @@ section{
 .header-accordion{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+}
+
+.header-accordion img {
+    transition: transform 0.3s ease;
+}
+
+.header-accordion img.girar {
+    transform: rotate(180deg);
 }
 
 .infos{
     background-color: #4ac8cb;
-    padding: 10px;
+    padding: 20px 30px;
     border-radius: 8px;
-    width: 1200px;
-    display: flex;
     justify-content: space-between;
+    display: none;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.infos.mostrar {
+    display: flex;
 }
 
 .campo{
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
     max-width: 500px;
+}
+
+.comentarios{
+    width: 50%;
+}
+
+#editar{
+    height: 20px;
+    margin-left: 5px;
 }
 
 .avaliacao{
@@ -71,6 +119,8 @@ section{
     gap: 10px;
     border-radius: 6px;
     font-weight: 600;
+    margin-top: 10px;
+    width: fit-content;
 }
 
 #estrela{
@@ -89,4 +139,122 @@ h4{
 
 h3, h4, p{
     margin: 0;
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 10px;
+}
+
+h3 > img{
+    height: 20px;
+    cursor: pointer;
+}
+
+#livrosNaoLidos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+    width: 90%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #80ed99;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 200;
+}
+
+#voltar{
+    text-decoration: none;
+    color: #4ac8cb;
+}
+
+#voltar:hover{
+    color: #22577a;
+}
+
+.voltar>img{
+    height: 24px;
+}
+
+.voltar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #22577a;
+    align-self: flex-start;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+label{
+    text-transform: uppercase;
+}
+
+input, textarea{
+    background-color: #57cc99;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input{
+    height: 25px;
+}
+
+select{
+    background-color: #57cc99;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.botao{
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 2px solid #22577a;
+}
+
+.cancelar{
+    background-color: transparent;
+    color: #22577a;
+}
+
+.salvar{
+    background-color: #22577a;
+    color: #80ed99;
 }

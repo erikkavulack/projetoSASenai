@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
     <title>Página de Cadastro</title>
 </head>
+
 <body>
     <header>
         <img src="/public/logo.svg" alt="" id="logo">
@@ -17,39 +22,42 @@
 
     <h1>Cadastre-se</h1>
 
-    <div class="subtitulo">
-        <a href="../login/index.html" id="subtitulo">Já Possui Cadastro? <span>Faça login</span></a>
-    </div>
+    <a href="../login/index.html" id="subtitulo">Já Possui Cadastro? <span>Faça login</span></a>
 
-    <div class="container">
+
+    <form class="container" id="formularioCadastro">
         <div class="formulario">
             <div id="coluna">
-                <label for="campoNovoNome">NOME</label>
-                <input type="text" id="campoNovoNome" name="campoNovoNome" required>
-                
-                <label for="campoNovoEmail">EMAIL</label>
-                <input type="email" id="campoNovoEmail" name="campoNovoEmail" required>
+                <label for="nomeCadastro">NOME</label>
+                <input type="text" id="nomeCadastro" name="nome" required>
+
+                <label for="emailCadastro">EMAIL</label>
+                <input type="email" id="emailCadastro" name="email" required>
             </div>
-    
-            <div id= "coluna">
-                <label for="campoNovaSenha">SENHA</label>
-                <input type="password" id="campoNovaSenha" name="campoNovaSenha" required>
-    
-                <label for="campoRepSenha">CONFIRME SUA SENHA</label>
-                <input type="password" id="campoRepSenha" name="campoRepSenha" required>
+
+            <div id=coluna>
+                <label for="senhaCadastro">SENHA</label>
+                <input type="password" id="senhaCadastro" name="senha" required>
+
+                <label for="confirmarSenhaCadastro">CONFIRME SUA SENHA</label>
+                <input type="password" id="confirmarSenhaCadastro" name="confsenha" required>
+
+                <button type="submit" id="botao">Cadastre-se</button>
             </div>
         </div>
 
-        <button onclick="cadastra()">Cadastrar</button>
-    </div>
+    </form>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Cadastro efetuado com sucesso</p>
+
+    <div id="modal" class="modal oculto">
+        <div class="modal-conteudo">
+            <span id="fecharModal" class="modal-fechar">&times;</span>
+            <p id="mensagemModal"></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>

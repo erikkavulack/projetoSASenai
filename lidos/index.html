@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
     <title>Lidos</title>
 </head>
+
 <body>
     <header>
-        <img src="/public/logo.svg" alt="" id="logo">
-        <a href="../telaInicial/index.html" id="cantologo">Sua Biblioteca Pessoal</a>
+        <a href="../telaInicial/index.html" id="cantologo"><img src="/public/logo.svg" alt="" id="logo">Sua Biblioteca
+            Pessoal</a>
+        <button onclick="desconectarUsuario()" class="sair">
+            <img src="../public/saida.svg" alt="sair">
+            Sair
+        </button>
     </header>
+    
+
     <h1>Lidos</h1>
-    <section>
-        <div class="header-accordion">
-            <h3>TÍTULO DO LIVRO</h3>
-            <img src="/public/seta.svg" alt="seta">
-        </div>
-        <div class="infos">
-            <div class="info">
-                <div class="campo">
-                    <h4>AUTOR</h4>
-                    <p>
-                        Fulano de Tal
-                    </p>
-                </div>
-                <div class="campo">
-                    <h4>EDITORA</h4>
-                    <p></p>
-                </div>
-                <div class="campo">
-                    <h4>GÊNERO</h4>
-                    <p></p>
-                </div>
-                <div class="campo">
-                    <h4>Avaliação</h4>
-                    <div class="avaliacao">
-                        <span>5</span>
-                        <img src="/public/estrela.svg" alt="estrela" id="estrela">
-                    </div>
-                </div>
-            </div>
-            <div class="campo">
-                <h4>COMENTÁRIOS</h4>
-                <p>Mussum Ipsum, cacilds vidis litro abertis.  Suco de cevadiss deixa as pessoas mais interessantis. Atirei o pau no gatis, per gatis num morreus. Leite de capivaris, leite de mula manquis sem cabeça. Per aumento de cachacis, eu reclamis.</p>
-            </div>
-        </div>
-    </section>
+    <div class="voltar">
+        <img src="../public/voltar.svg" alt="voltar" id="voltar">
+        <a href="../bibliotecas/index.html" id="voltar">Voltar</a>
+    </div>
+
+    <div id="livrosLidos">
+
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

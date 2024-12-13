@@ -1,21 +1,22 @@
 function gerarListaLivros() {
-    const livrosAbandonados = document.getElementById("livrosAbandonados");
+    const livrosNaoLidos = document.getElementById("livrosNaoLidos");
     const livros = JSON.parse(localStorage.getItem('livros')) || [];
-    const abandonados = livros.filter(livro => livro.situacao === "Abandonados");
+    const NaoLido = livros.filter(livro => livro.situacao === "NaoLido");
 
-    if (abandonados.length === 0) {
-        livrosAbandonados.innerHTML = "<p>Nenhum livro encontrado.</p>";
+    if (NaoLido.length === 0) {
+        livrosNaoLidos.innerHTML = "<p>Nenhum livro encontrado.</p>";
         return;
     }
 
-    abandonados.forEach((livro, index) => {
-        const section = document.createElement("section");
+    // livrosNaoLidos.innerHTML = "";
 
+    NaoLido.forEach((livro, index) => {
+        const section = document.createElement("section");
         const header = document.createElement("div");
         header.classList.add("header-accordion");
         header.innerHTML = `
-            <h3>${livro.livro}<img class="outra-img editar-livro" src="/public/editar.svg" alt="editar" data-index="${index}"></h3>
-            <img class="seta" src="/public/seta.svg" alt="seta">
+            <h3>${livro.livro}<img src="/public/editar.svg" alt="editar" class="editar-livro" data-index="${index}"></h3>
+            <img src="/public/seta.svg" alt="seta" class="seta">
         `;
 
         const infos = document.createElement("div");
@@ -37,7 +38,7 @@ function gerarListaLivros() {
                 <div class="campo">
                     <h4>Nota</h4>
                     <div class="avaliacao">
-                        <span>${livro.nota}</span>
+                        <span>${livro.nota}/5</span>
                         <img src="/public/estrela.svg" alt="estrela" id="estrela">
                     </div>
                 </div>
@@ -64,7 +65,7 @@ function gerarListaLivros() {
         section.appendChild(header);
         section.appendChild(infos);
 
-        livrosAbandonados.appendChild(section);
+        livrosNaoLidos.appendChild(section);
     });
 
     document.querySelectorAll('.editar-livro').forEach((botao) => {
@@ -75,17 +76,18 @@ function gerarListaLivros() {
     });
 }
 
+
 function abrirModalEdicao(index) {
     const livros = JSON.parse(localStorage.getItem('livros')) || [];
-    const abandonados = livros.filter(livro => livro.situacao === "Abandonados");
-    const livro = abandonados[index];
+    const naoLidos = livros.filter(livro => livro.situacao === "NaoLido");
+    const livro = naoLidos[index];
 
     document.getElementById('modalNome').value = livro.livro || '';
     document.getElementById('modalEditora').value = livro.editora || '';
     document.getElementById('modalGenero').value = livro.genero || '';
     document.getElementById('modalNota').value = livro.nota || '';
     document.getElementById('modalComentarios').value = livro.comentarios || '';
-    document.getElementById('modalSituacao').value = livro.situacao || 'Abandonado';
+    document.getElementById('modalSituacao').value = livro.situacao || 'NaoLido';
 
     document.getElementById('modal').dataset.index = index;
 
@@ -98,11 +100,11 @@ document.getElementById('modalFechar').addEventListener('click', () => {
 
 document.getElementById('modalSalvar').addEventListener('click', () => {
     const livros = JSON.parse(localStorage.getItem('livros')) || [];
-    const abandonados = livros.filter(livro => livro.situacao === "Abandonados");
-    const indexAbandonados = document.getElementById('modal').dataset.index;
+    const naoLidos = livros.filter(livro => livro.situacao === "NaoLido");
+    const indexNaoLidos = document.getElementById('modal').dataset.index;
 
-    const livroAbandonado = abandonados[indexAbandonados];
-    const indexLivros = livros.findIndex(livro => livro.livro === livroAbandonado.livro);
+    const livroNaoLido = naoLidos[indexNaoLidos];
+    const indexLivros = livros.findIndex(livro => livro.livro === livroNaoLido.livro);
 
     livros[indexLivros] = {
         ...livros[indexLivros],
@@ -117,14 +119,14 @@ document.getElementById('modalSalvar').addEventListener('click', () => {
     localStorage.setItem('livros', JSON.stringify(livros));
 
     document.getElementById('modal').style.display = 'none';
-    document.getElementById('livrosAbandonados').innerHTML = '';
+    document.getElementById('livrosNaoLidos').innerHTML = '';
     gerarListaLivros();
 });
+
 
 gerarListaLivros();
 
 function desconectarUsuario() {
     localStorage.removeItem('usuarioAtual');
-
     window.location.href = '../telaInicial/index.html';
 }

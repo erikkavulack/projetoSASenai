@@ -1,124 +1,149 @@
-body{
+body {
     background-color: #c7f9cc;
     color: #22577a;
     height: 100vh;
-    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-*{
+* {
     font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
     display: flex;
     gap: 17px;
     width: 100%;
     font-weight: bolder;
 }
 
-#cantologo{
+#cantologo {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #22577a;
 }
 
-#logo{
+#logo {
     height: 50px;
 }
 
-#subtitulo{
-    color: #22577a;
+#subtitulo {
     text-decoration: none;
+    color: #22577a;
+    margin-bottom: 60px;
 }
 
-#subtitulo > span{
+#subtitulo>span {
     text-decoration: underline;
 }
 
-h1{
+h1 {
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     gap: 35px;
 }
 
-.formulario{
+.formulario {
     display: flex;
     gap: 30px;
 }
 
-#coluna{
+#coluna {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-label{
+label {
     margin-bottom: 5px;
 }
 
-input{
+input {
     background-color: #57cc99;
     border: none;
-    width: 460px;
-    max-width: 100%;
-    height: 25px;
+    min-width: 460px;
     padding: 20px;
     font-size: 20px;
     color: #22577a;
     margin-bottom: 20px;
 }
 
-button{
+#botao {
     color: #c7f9cc;
     font-weight: 600;
-    background-color:#22577a;
+    background-color: #22577a;
     border: none;
     font-size: 18px;
     padding: 8px 20px;
     align-self: flex-end;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-/* Estilo para o modal */
 .modal {
-    display: none; /* Oculta o modal por padrão */
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1; /* Garante que o modal fique acima de outros elementos */
-    left: 0;
+    position: fixed;
     top: 0;
-    width: 100%; /* Largura total da tela */
-    height: 100%; /* Altura total da tela */
-    overflow: auto; /* Adiciona barra de rolagem se necessário */
-    background-color: rgb(0,0,0); /* Cor de fundo */
-    background-color: rgba(0,0,0,0.4); /* Cor de fundo com transparência */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
-/* Estilo para o conteúdo do modal */
-.modal-content {
-    background-color: #fefefe; /* Cor de fundo do conteúdo */
-    margin: 15% auto; /* Margem para centralizar o modal */
-    padding: 20px; /* Espaçamento interno */
-    border: 1px solid #888; /* Borda do modal */
-    width: 80%; /* Largura do conteúdo do modal */
+
+.modal-conteudo {
+    background: #80ed99;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
-/* Estilo para o botão de fechar */
-.close {
-    color: #aaa; /* Cor do botão de fechar */
-    float: right; /* Alinha à direita */
-    font-size: 28px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
+
+.modal-fechar {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
 }
-/* Estilo para o botão de fechar quando o mouse estiver sobre ele */
-.close:hover,
-.close:focus {
-    color: black; /* Cor preta */
-    text-decoration: none; /* Remove sublinhado */
-    cursor: pointer; /* Altera o cursor para pointer */
+
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visivel {
+    opacity: 1;
+    pointer-events: all;
+}
+#mensagemModal{
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .formulario {
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    input {
+        min-width: 80%;
+    }
 }

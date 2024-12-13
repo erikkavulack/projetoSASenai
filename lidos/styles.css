@@ -2,7 +2,6 @@ body{
     background-color: #c7f9cc;
     color: #22577a;
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +16,7 @@ header{
     gap: 17px;
     width: 100%;
     font-weight: bolder;
+    justify-content: space-between;
 }
 
 #cantologo{
@@ -24,6 +24,31 @@ header{
     display: flex;
     align-items: center;
     color: #22577a;
+}
+
+.sair{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #38a3a5;
+    color: #c7f9cc;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+.sair>img{
+    height: 24px;
+}
+#sair{
+    text-decoration: none;
+    color: #c7f9cc;
+}
+
+button{
+    cursor: pointer;
 }
 
 #logo{
@@ -40,18 +65,40 @@ section{
     gap: 20px;
 }
 
+section{
+    color: #c7f9cc;
+    background-color: #38a3a5;
+    padding: 20px 28px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .header-accordion{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+}
+
+.header-accordion img {
+    transition: transform 0.3s ease;
+}
+
+.header-accordion img.girar {
+    transform: rotate(180deg);
 }
 
 .infos{
     background-color: #4ac8cb;
     padding: 10px;
     border-radius: 8px;
-    width: 1200px;
-    display: flex;
     justify-content: space-between;
+    display: none;
+}
+
+.infos.mostrar {
+    display: flex;
 }
 
 .campo{
@@ -59,6 +106,16 @@ section{
     flex-direction: column;
     margin-bottom: 14px;
     max-width: 500px;
+}
+
+.comentarios{
+    width: 450px;
+    max-width: 500px;
+}
+
+#editar{
+    height: 20px;
+    margin-left: 5px;
 }
 
 .avaliacao{
@@ -89,4 +146,44 @@ h4{
 
 h3, h4, p{
     margin: 0;
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+#livrosLidos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+    width: 90%;
+}
+
+#voltar{
+    text-decoration: none;
+    color: #4ac8cb;
+}
+
+#voltar:hover{
+    color: #22577a;
+}
+
+.voltar>img{
+    height: 24px;
+}
+
+.voltar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #22577a;
+    align-self: flex-start;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
 }

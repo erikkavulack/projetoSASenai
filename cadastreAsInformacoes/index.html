@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+    <header>        
+        <a href="../telaInicial/index.html" id="cantologo"><img src="/public/logo.svg" alt="" id="logo">Sua Biblioteca Pessoal</a>
+
+    </header>
+
+    <h1 class="titulo">Cadastro de Livros</h1>
+
+    <div class="container">
+        <form id="cadastroForm">
+            <div class="coluna">
+                <label for="livro">Nome do Livro:</label>
+                <input type="text" id="livro" name="livro" required>
+                
+                <label for="editora">Editora:</label>
+                <input type="text" id="editora" name="editora" required>
+                
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" required>
+
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+            </div>
+            
+            <div class="coluna">
+                <label for="comentarios">Comentários:</label>
+                <textarea id="comentarios" name="comentarios" rows="5" cols="33"></textarea>
+            
+                <label for="nota">Nota:</label>
+                <input type="number" id="nota" name="nota" >
+            
+                <label for="situacao">Situação:</label>
+                <select id="situacao" required>
+                    <option value="Lido">Lido</option>
+                    <option value="NaoLido">Não Lidos</option>
+                    <option value="Abandonados">Abandonados</option>
+                </select>
+
+                
+                <div class="botoes">
+                    <a href="../bibliotecas/index.html" class="voltar">Voltar</a>
+                    <button type="submit" id="botao">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal" class="modal oculto">
+        <div class="modal-conteudo">
+            <span id="fecharModal" class="modal-fechar">&times;</span>
+            <p id="mensagemModal"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

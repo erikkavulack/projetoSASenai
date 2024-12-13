@@ -2,7 +2,6 @@ body{
     background-color: #c7f9cc;
     color: #22577a;
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +16,7 @@ header{
     gap: 17px;
     width: 100%;
     font-weight: bolder;
+    justify-content: space-between;
 }
 
 #cantologo{
@@ -26,16 +26,37 @@ header{
     color: #22577a;
 }
 
-#logo{
+.sair{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #38a3a5;
+    color: #c7f9cc;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+.sair>img{
+    height: 24px;
+}
+
+#logo {
     height: 50px;
 }
 
-section{
+button {
+    cursor: pointer;
+}
+
+section {
     background-color: #57cc99;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 57px 20px;
+    padding: 0 60px 57px 60px;
     max-width: 75%;
     margin-top: 5%;
     border-radius: 8px;
@@ -78,7 +99,66 @@ section{
     padding: 10px;
     justify-content: center;
 }
+
 .image{
     height: 100px;
+}
 
+#addLivro{
+    background-color: #c7f9cc;
+    border-style: none;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #22577a;
+    margin-top: 40px;
+    text-decoration: none;
+    padding: 12px 30px;
+}
+
+.addLivro{
+    display: flex;
+    align-self: flex-end;
+}
+
+.mobile-linha {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 500px) {
+    section {
+        max-width: 100%;
+        padding: 0 10px 30px 10px;
+        margin-top: 10%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        max-height: 200px;
+    }
+
+    .images {
+        height: max-content;
+    }
+
+    .image {
+        max-width: 50px;
+    }
+
+    .mobile-linha {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #texto {
+        text-align: left;
+        margin-left: 10px;
+    }
+    
+    h3 {
+        margin-top: 0;
+    }
 }
